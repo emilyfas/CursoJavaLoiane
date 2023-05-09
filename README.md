@@ -6,6 +6,25 @@ Aqui você pode encontrar o curso:
 [Curso Java Basico](https://loiane.training/curso/java-basico)
 
 ---
+## Descrição do Curso:
+<b>Curso de Java Básico (Java SE).</b>
+
+### Módulo 1:
+* Lógica de programação básica
+* Orientação a Objetos
+* Tratamento de Erros
+
+### Outros módulos desse curso:
+* Classes utilitárias que todo desenvolvedor deve saber usar
+* Leitura e criação de arquivos
+* Collections (Estruturas de dados do Java)
+* Interface gráfica com Swing e JavaFX
+* Acesso ao banco de dados
+
+<b>Nível: Iniciante ao Intermediário</b>
+
+
+---
 ## Contato:
 ### Emilly Fernandes
 Alguns meios de contato:
