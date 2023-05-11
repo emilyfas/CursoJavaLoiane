@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Renata
- *
- */
-module HelloWorld {
-}
