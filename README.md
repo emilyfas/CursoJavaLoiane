@@ -31,8 +31,11 @@ Impressões das IDE's que utilizei:
 
 ### Eclipse IDE
 
+
+
 ### IntelliJ IDEA
 
+Gostei muito da interface da IDE e
 
 ---
 ## Contato:
