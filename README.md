@@ -26,7 +26,7 @@ Aqui você pode encontrar o curso:
 
 ### Eclipse IDE
 
-### IntelliJ
+### IntelliJ IDEA
 
 
 ---
