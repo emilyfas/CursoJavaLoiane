@@ -25,7 +25,9 @@ Aqui você pode encontrar o curso:
 
 <b>Nível: Iniciante ao Intermediário</b>
 
-## Impressões das IDE's que utilizei:
+## IDE's
+
+Impressões das IDE's que utilizei:
 
 ### Eclipse IDE
 
