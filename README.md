@@ -1,3 +1,4 @@
+
 # CursoJavaLoiane
 Repositório utilizado para armazenar arquivos, atividades e projetos desenvolvidos no curso de Java Básico da Loiane.training.
 
@@ -24,7 +25,7 @@ Aqui você pode encontrar o curso:
 
 <b>Nível: Iniciante ao Intermediário</b>
 
-## Impressões 
+## Impressões das IDE's que utilizei:
 
 ### Eclipse IDE
 
