@@ -16,7 +16,7 @@ public class exer12 {
 
         double salarioBruto = valorHora * horasTrabalho;
         double percentual = 0;
-        double IR = 0;
+        double IR;
         double INSS = (10.0 / 100.0) * salarioBruto;
         double FGTS = (11.0 / 100.0) * salarioBruto;
 

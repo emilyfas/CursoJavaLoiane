@@ -16,37 +16,15 @@ public class exer18 {
 
             int dia1 = Integer.parseInt(String.valueOf(data.charAt(0)));
             int dia2 = Integer.parseInt(String.valueOf(data.charAt(1)));
-            if (dia1 == 1 || dia1 == 2){
-                dia = true;
-            } else if (dia1==3 && dia2<=1) {
-                dia = true;
-            } else if (dia1==0 && dia2 > 0) {
-                dia = true;
-            } else {
-                dia = false;
-            }
+            dia = dia1 == 1 || dia1 == 2 || dia1 == 3 && dia2 <= 1 || dia1 == 0 && dia2 > 0;
 
             int mes1 = Integer.parseInt(String.valueOf(data.charAt(3)));
             int mes2 = Integer.parseInt(String.valueOf(data.charAt(4)));
-            if (mes1==0 && mes2 > 0){
-                mes = true;
-            } else if (mes1==1 && mes2 <=2) {
-                mes = true;
-            }else {
-                mes = false;
-            }
+            mes = mes1 == 0 && mes2 > 0 || mes1 == 1 && mes2 <= 2;
 
-            if(Integer.parseInt(String.valueOf(data.charAt(9))) > 0){
-                ano = true;
-            }else{
-                ano = false;
-            }
+            ano = Integer.parseInt(String.valueOf(data.charAt(9))) > 0;
 
-            if (data.charAt(2)=='/' && data.charAt(5)=='/'){
-                simb = true;
-            }else{
-                simb = false;
-            }
+            simb = data.charAt(2) == '/' && data.charAt(5) == '/';
 
             if (dia && mes && ano && simb){
                 JOptionPane.showMessageDialog(null, "Data válida");

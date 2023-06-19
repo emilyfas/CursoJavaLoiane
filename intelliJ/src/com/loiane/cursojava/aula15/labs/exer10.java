@@ -12,16 +12,10 @@ public class exer10 {
         System.out.println("M-matutino, V-Vespertino ou N-Noturno");
         char turno = in.next().trim().toLowerCase().charAt(0);
 
-        switch (turno){
-            case 'm':
-                System.out.println("Bom dia!");
-                break;
-            case 'v':
-                System.out.println("Boa tarde!");
-                break;
-            case 'n':
-                System.out.println("Boa noite!");
-                break;
+        switch (turno) {
+            case 'm' -> System.out.println("Bom dia!");
+            case 'v' -> System.out.println("Boa tarde!");
+            case 'n' -> System.out.println("Boa noite!");
         }
     }
 }

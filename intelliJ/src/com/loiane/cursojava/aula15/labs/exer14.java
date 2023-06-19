@@ -30,16 +30,9 @@ public class exer14 {
             conceito = 'E';
         }
 
-        switch (conceito){
-            case 'A':
-            case 'B':
-            case 'C':
-                situacao = "APROVADO";
-                break;
-            case 'D':
-            case 'E':
-                situacao = "REPROVADO";
-                break;
+        switch (conceito) {
+            case 'A', 'B', 'C' -> situacao = "APROVADO";
+            case 'D', 'E' -> situacao = "REPROVADO";
         }
 
         System.out.println("Notas do aluno: " + nota1 + " e " + nota2);

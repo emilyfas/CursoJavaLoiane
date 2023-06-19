@@ -17,17 +17,13 @@ public class exer15 {
 
         boolean tri = false;
 
-        if ((lado1 + lado2) > lado3){
-            tri = true;
-        }else if ((lado3 + lado2) > lado1){
-            tri = true;
-        }else if ((lado3 + lado1) > lado2){
+        if ((lado1 + lado2) > lado3 || (lado3 + lado2) > lado1 || (lado3 + lado1) > lado2){
             tri = true;
         }else{
             System.out.println("Os valores não formam um triangulo");
         }
 
-        String tipoTri = "none";
+        String tipoTri;
 
         if (tri){
             if(lado1 == lado2 && lado1 == lado3 && lado2 == lado3){
