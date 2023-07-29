@@ -22,28 +22,19 @@ public class exer9 {
         if (b < num1 || b == num1){
             num2 = num1;
             num1 = b;
-            if (c < num1 || c == num1){
-                num3 = num2;
-                num2 = num1;
-                num1 = c;
-            }else if(c < num2){
-                num3 = num2;
-                num2 = c;
-            }else{
-                num3 = c;
-            }
+
         }else if (b > num1){
             num2 = b;
-            if (c < num1 || c == num1){
-                num3 = num2;
-                num2 = num1;
-                num1 = c;
-            }else if(c < num2) {
-                num3 = num2;
-                num2 = c;
-            }else{
-                num3 = c;
-            }
+        }
+        if (c < num1 || c == num1){
+            num3 = num2;
+            num2 = num1;
+            num1 = c;
+        }else if(c < num2){
+            num3 = num2;
+            num2 = c;
+        }else{
+            num3 = c;
         }
 
         System.out.println("Os numeros em ordem decrescente ficam: " + num3 + ", " + num2 + " e " + num1);

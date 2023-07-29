@@ -16,7 +16,7 @@ public class exer14 {
         double media = (nota1 + nota2)/2;
         char conceito = 'O';
 
-        String situacao = "nula";
+        String situacao = "";
 
         if (media >= 9 && media <= 10){
             conceito = 'A';

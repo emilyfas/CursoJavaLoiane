@@ -9,9 +9,9 @@ public class exer4 {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Informe uma letra:");
-        char letra = scan.next().charAt(0);
+        String letra = scan.next();
 
-        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+        if (letra.equalsIgnoreCase("a") || letra.equalsIgnoreCase("e") || letra.equalsIgnoreCase("i") || letra.equalsIgnoreCase("o") || letra.equalsIgnoreCase("u")){
             System.out.println("A letra " + letra + " é uma vogal");
         } else{
             System.out.println("A letra " + letra + " é uma consoante");

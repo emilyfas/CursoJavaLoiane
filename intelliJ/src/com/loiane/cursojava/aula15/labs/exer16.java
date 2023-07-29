@@ -19,22 +19,19 @@ public class exer16 {
             double c = scan.nextDouble();
 
             double delta = (b*b) - 4 * a * c;
-            double raiz1 = (-b + Math.sqrt(delta))/ 2 * a;
-            double raiz2 = (-b - Math.sqrt(delta))/ 2 * a;
 
             if (delta<0){
-                System.out.println("Delta é igual a 0, então a equação não possui raizes reais");
-            }else if (delta == 0){
-                System.out.println("A equação possui apenas uma raiz: " + raiz1);
-            }else{
-                System.out.println("A equação possui duas raizes: " + raiz1 + " e " + raiz2);
-                System.out.println("Delta: "+delta);
+                System.out.println("Delta é negativo, então a equação não possui raizes reais");
+            }else {
+                double raiz1 = (-b + Math.sqrt(delta))/ 2 * a;
+                double raiz2 = (-b - Math.sqrt(delta))/ 2 * a;
+
+                if (delta == 0){
+                    System.out.println("A equação possui apenas uma raiz: " + raiz1);
+                }else{
+                    System.out.println("A equação possui duas raizes: " + raiz1 + " e " + raiz2);
+                }
             }
         }
-
-
-
-
-
     }
 }

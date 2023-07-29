@@ -2,7 +2,7 @@ package com.loiane.cursojava.aula15.labs;
 
 import javax.swing.*;
 
-public class exer20 {
+public class exer21 {
     public static void main(String[] args) {
 
         String saque = JOptionPane.showInputDialog("Informe o valor a ser sacado:");

@@ -10,7 +10,7 @@ public class exer10 {
 
         System.out.println("Digite em qual turno voce estuda: ");
         System.out.println("M-matutino, V-Vespertino ou N-Noturno");
-        char turno = in.next().trim().toLowerCase().charAt(0);
+        char turno = in.next().toLowerCase().charAt(0);
 
         switch (turno) {
             case 'm' -> System.out.println("Bom dia!");
