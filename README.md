@@ -25,17 +25,12 @@ Aqui você pode encontrar o curso:
 
 <b>Nível: Iniciante ao Intermediário</b>
 
-## IDE's
-
-Impressões das IDE's que utilizei:
+## IDE's que utilizei:
 
 ### Eclipse IDE
 
-
-
 ### IntelliJ IDEA
 
-Gostei muito da interface da IDE e
 
 ---
 ## Contato:
