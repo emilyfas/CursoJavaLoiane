@@ -16,6 +16,6 @@ public class LoopWhile {
         while (i <= max){
             System.out.println(i);
             i++;
-    }
+        }
     }
 }
