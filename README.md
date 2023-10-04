@@ -1,6 +1,6 @@
 
 # CursoJavaLoiane
-Repositório utilizado para armazenar arquivos, atividades e projetos desenvolvidos no curso de Java Básico da Loiane.training.
+Repositório utilizado para armazenar arquivos, atividades e projetos desenvolvidos no curso de Java Básico e no curso de Java Intermediario da Loiane.training.
 
 ---
 ## Link do curso:
@@ -8,8 +8,8 @@ Aqui você pode encontrar o curso:
 [Curso Java Basico](https://loiane.training/curso/java-basico)
 
 ---
-## Descrição do Curso:
-<b>Curso de Java Básico (Java SE).</b>
+## Descrição dos Cursos:
+## Curso de Java Básico (Java SE).
 
 ### Módulo 1:
 * Lógica de programação básica
@@ -23,13 +23,22 @@ Aqui você pode encontrar o curso:
 * Interface gráfica com Swing e JavaFX
 * Acesso ao banco de dados
 
-<b>Nível: Iniciante ao Intermediário</b>
+## Curso de Java Intermediario.
+
+* Mais sobre a linguagem Java (Enum, autoboxing, etc)
+* Escopo de variáveis, passagem de parâmetros por referência ou valor
+* Threads
+* Manipulação de Strings e formatação de dados
+* Classes utilitárias que todo desenvolvedor deve saber usar (Datas, Locale, Math)
+* Como instalar e usar bibliotecas (jars) em projetos Java
 
 ## IDE's que utilizei:
 
-### Eclipse IDE
+* IntelliJ IDEA
 
-### IntelliJ IDEA
+* Eclipse IDE
+
+
 
 
 ---
