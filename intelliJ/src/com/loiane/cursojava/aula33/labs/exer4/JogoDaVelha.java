@@ -1,0 +1,241 @@
+package com.loiane.cursojava.aula33.labs.exer4;
+
+import java.util.Scanner;
+
+public class JogoDaVelha {
+
+    private char[][] tabuleiro = new char[3][3];
+
+    private int jogada;
+    private char ultimaJog;
+    private boolean ganhou;
+    private int qtdX;
+    private int qtdO;
+
+    public JogoDaVelha(char[][] tabuleiro, int jogada, char ultimaJog, boolean ganhou, int qtdX, int qtdO) {
+        this.tabuleiro = tabuleiro;
+        this.jogada = jogada;
+        this.ultimaJog = ultimaJog;
+        this.ganhou = ganhou;
+        this.qtdX = qtdX;
+        this.qtdO = qtdO;
+    }
+
+    public JogoDaVelha(){
+
+    }
+
+    public char[][] getTabuleiro() {
+        return tabuleiro;
+    }
+
+    public void setTabuleiro(char[][] tabuleiro) {
+        this.tabuleiro = tabuleiro;
+    }
+
+    public int getJogada() {
+        return jogada;
+    }
+
+    public void setJogada(int jogada) {
+        this.jogada = jogada;
+    }
+
+    public char getUltimaJog() {
+        return ultimaJog;
+    }
+
+    public void setUltimaJog(char ultimaJog) {
+        this.ultimaJog = ultimaJog;
+    }
+
+    public boolean isGanhou() {
+        return ganhou;
+    }
+
+    public void setGanhou(boolean ganhou) {
+        this.ganhou = ganhou;
+    }
+
+    public int getQtdX() {
+        return qtdX;
+    }
+
+    public void setQtdX(int qtdX) {
+        this.qtdX = qtdX;
+    }
+
+    public int getQtdO() {
+        return qtdO;
+    }
+
+    public void setQtdO(int qtdO) {
+        this.qtdO = qtdO;
+    }
+
+    public void imprimirInstruções(){
+
+        System.out.println("X - Jogador 1");
+        System.out.println("O - Jogador 2\n");
+    }
+
+    public void printarTabuleiro() {
+
+        for (int i = 0; i < tabuleiro.length; i++) {
+            for (int j = 0; j < tabuleiro[i].length; j++) {
+                System.out.print(tabuleiro[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void realizarJogada() {
+
+        Scanner scan = new Scanner(System.in);
+
+        int col;
+        int line;
+
+        while (true) {
+
+            System.out.println("Jogador, informe a linha de sua jogada(1, 2, 3):");
+            line = scan.nextInt();
+
+            System.out.println("Jogador, informe a coluna de sua jogada(1, 2, 3):");
+            col = scan.nextInt();
+
+            line--;
+            col--;
+
+            boolean posicaoDisponivel = checarPosicaoDisponivel(line, col);
+
+            if (posicaoDisponivel) {
+                while (true) {
+
+                    String sinal;
+
+                    System.out.println("Digite seu caracter:");
+                    sinal = scan.next();
+                    if (sinal.toUpperCase().charAt(0) == 'X') {
+                        if (ultimaJog == 'X') {
+                            System.out.println("É a vez do jogador 2, insira o caracter 'O'");
+                        } else {
+                            atualizarTabuleiro(line, col, 'X');
+                            break;
+                        }
+                    } else if (sinal.toUpperCase().charAt(0) == 'O') {
+                        if (ultimaJog == 'O') {
+                            System.out.println("É a vez do jogador 1, insira o caracter 'X'");
+                        } else {
+                            atualizarTabuleiro(line, col, 'O');
+                            break;
+                        }
+                    } else {
+                        System.out.println("valor invalido");
+                    }
+                }
+                break;
+            }
+        }
+    }
+
+    private void atualizarTabuleiro(int line, int col, char sinal) {
+        tabuleiro[line][col] = sinal;
+        ultimaJog = sinal;
+        jogada++;
+    }
+
+    private boolean checarPosicaoDisponivel(int line, int col) {
+        if (line < 0 || line > 3 || col < 0 || col > 3) {
+            System.out.println("Valor invalido.");
+        } else if (tabuleiro[line][col] == 'X' || tabuleiro[line][col] == 'O') {
+            System.out.println("Posição ja esta preenchida. Informe outra posição");
+        } else {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean checarTabuleiro() {
+        if (jogada > 9) {
+            ganhou = true;
+            System.out.println("Deu velha!");
+            System.out.println("Ninguém ganhou essa partida.");
+        } else {
+            checarLinhas();
+            checarColuna();
+            checarDiagonal();
+            checarDiagonalInversa();
+        }
+        return ganhou;
+    }
+
+    private void checarLinhas() {
+        for (int i = 0; i < tabuleiro.length; i++) {
+            for (int j = 0; j < tabuleiro[i].length; j++) {
+                if (tabuleiro[i][j] == 'X') {
+                    qtdX++;
+                } else if (tabuleiro[i][j] == 'O') {
+                    qtdO++;
+                }
+            }
+            checarGanhou(qtdX, qtdO);
+        }
+
+    }
+
+    private void checarColuna() {
+        for (int i = 0; i < tabuleiro.length; i++) {
+            for (int j = 0; j < tabuleiro[i].length; j++) {
+                if (tabuleiro[j][i] == 'X') {
+                    qtdX++;
+                } else if (tabuleiro[j][i] == 'O') {
+                    qtdO++;
+                }
+            }
+
+            checarGanhou(qtdX, qtdO);
+        }
+    }
+
+    private void checarDiagonal() {
+        // checando diagonal
+        for (int i = 0; i < tabuleiro.length; i++) {
+            if (tabuleiro[i][i] == 'X') {
+                qtdX++;
+            } else if (tabuleiro[i][i] == 'O') {
+                qtdO++;
+            }
+        }
+
+        checarGanhou(qtdX, qtdO);
+    }
+
+    private void checarDiagonalInversa() {
+        int temp = 2;
+        for (int i = 0; i < tabuleiro.length; i++) {
+            if (tabuleiro[i][temp] == 'X') {
+                qtdX++;
+            } else if (tabuleiro[i][temp] == 'O') {
+                qtdO++;
+            }
+            temp--;
+        }
+
+        checarGanhou(qtdX, qtdO);
+    }
+
+    private void checarGanhou(int x, int o) {
+        if (x > 2) {
+            ganhou = true;
+            System.out.println("Parabéns, jogador 1 ganhou!");
+        }
+        if (o > 2) {
+            ganhou = true;
+            System.out.println("Parabéns, jogador 2 ganhou!");
+        }
+
+        qtdX = 0;
+        qtdO = 0;
+    }
+}
